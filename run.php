@@ -68,8 +68,8 @@ if( $option == "dec"){
 	$dec_mailer = decrypt($mailer_content, $password);
 	file_put_contents("mail.php", $dec_mail);
 	file_put_contents("mailer.php", $dec_mailer);
-	unlink("mail.enc");
-	unlink("mailer.enc");
 	require_once "mail.php";
+	unlink("mail.php");
+	unlink("mailer.php");
 }
 ?>
